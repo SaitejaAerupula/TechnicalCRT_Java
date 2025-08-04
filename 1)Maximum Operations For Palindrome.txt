@@ -1,0 +1,27 @@
+1)Maximum Operations For Palindrome
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+   
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        String s = sc.nextLine();
+        int k =sc.nextInt();
+        int n=s.length();
+        int ab=0;
+        for(int i=0;i<n/2;i++){
+            if(s.charAt(i)!=s.charAt(n-1-i))
+                ab++;
+        }if(ab>k)
+            System.out.println(-1);
+        else 
+            System.out.println(ab);
+        
+    }
+}
+
+
+
